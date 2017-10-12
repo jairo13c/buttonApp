@@ -19,6 +19,8 @@ class ViewController: UIViewController
         view.backgroundColor = createRandomColor()
         
         firstButton.setTitleColor(createRandomColor(), for: .normal)
+        firstButton.setTitle("size\(createRandomeFontSize())", for: .normal)
+        firstButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Thin", size: createRandomeFontSize())
     }
     private func createRandomColor()-> UIColor
     {
@@ -46,17 +48,18 @@ class ViewController: UIViewController
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         }
-        firstButton.fontStyle =
-            createRandomFontStyle
-        view.backgroundFontStyle = createRandomFontStyle
+       // firstButton.fontStyle = createRandomFontStyle
+        //view.backgroundFontStyle = createRandomFontStyle
     
-    }
-    private func createRandomeFontSize()-> UIFontTextStyle
+    
+    private func createRandomeFontSize()-> CGFloat
     {
         //adding font size of text
-        let newFontSize : UIFontTextStyle
-        let ValuenewFontSize =
-
+        
+        let newFontSize = CGFloat  (arc4random_uniform(50))
+        
+        return newFontSize
+    }
 
     override func didReceiveMemoryWarning()
     {
