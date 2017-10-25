@@ -11,10 +11,10 @@ public class SecoundScreenContoller : UIViewController
 {
     private lazy var color : ColorTools = ColorTools()
     
-    public override func viewDiddLoad()
+    public override func viewDidLoad()
     {
         super.viewDidLoad()
-        view.backgroundColor = color.createRandomeColor()
+        view.backgroundColor = color.createRandomColor()
         
     }
 }

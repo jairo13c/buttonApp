@@ -8,21 +8,19 @@
 
 import UIKit
 
-class ViewCoroller: UIViewController
+public class ColorTools
 {
+    public func createRandomColor()-> UIColor
+    {
+        //need red green and blue vaue CGFloat
+        let newColor : UIColor
+        let redValue = CGFloat (Double (arc4random_uniform(256)) / 255.00)
+        let greenValue = CGFloat (Double (arc4random_uniform(256)) / 255.00)
+        let blueValue = CGFloat (Double (arc4random_uniform(256)) / 255.00)
+        
+        newColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: CGFloat(1.0))
+        return newColor
+    }
     
-    private lazy var ColorTool : ColorTools = ColorTools()
-
-
-
-{
-    
-        secundButton.Background = colorTools.createRandomeColor()
-        view.backgroundColor = colorTools.createRandomeColor()
-        secondButton
-{
-
-
-
-
+}
 

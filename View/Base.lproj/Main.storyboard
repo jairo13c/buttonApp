@@ -27,6 +27,8 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="firstMethod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7qz-ZA-ozw"/>
+                                    <action selector="imageFrame" destination="J2u-HC-Y1n" eventType="touchUpInside" id="fkt-EC-lTA"/>
+                                    <action selector="imageFramer" destination="J2u-HC-Y1n" eventType="touchUpInside" id="val-sz-3eu"/>
                                     <segue destination="BTW-QE-RhB" kind="show" id="a0N-i6-b56"/>
                                 </connections>
                             </button>
@@ -38,6 +40,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="J2u-HC-Y1n" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="623" y="-200"/>
         </scene>
@@ -52,16 +55,6 @@
                     <view key="view" contentMode="scaleToFill" id="h3O-v8-1aF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ap-1O-Kn8">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="5uD-KS-5mm" kind="show" id="04d-k5-qEi"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -69,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="1404" y="33.733133433283363"/>
         </scene>
-        <!--View Controller-->
+        <!--Media Page Controller-->
         <scene sceneID="BKi-Fd-mPJ">
             <objects>
-                <viewController id="72T-MZ-Cql" sceneMemberID="viewController">
+                <viewController id="72T-MZ-Cql" customClass="MediaPageController" customModule="buttonApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ARr-xQ-wXN"/>
                         <viewControllerLayoutGuide type="bottom" id="Bwz-dw-YFY"/>
@@ -90,9 +83,31 @@
                                 <rect key="frame" x="67" y="118" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dZv-2t-7hD">
+                                <rect key="frame" x="122" y="445" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderMethod" destination="72T-MZ-Cql" eventType="valueChanged" id="H3q-U3-5p5"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7w-aE-lCg">
+                                <rect key="frame" x="146" y="527" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="soundMethod" destination="72T-MZ-Cql" eventType="touchUpInside" id="E8n-Vy-xvy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageButton" destination="oZT-eM-xMq" id="w2b-JK-MZI"/>
+                        <outlet property="imageFrame" destination="Wdf-bP-PMe" id="RCp-Bz-CCh"/>
+                        <outlet property="soundButton" destination="Q7w-aE-lCg" id="8KW-iX-u4g"/>
+                        <outlet property="soundMethod" destination="Q7w-aE-lCg" id="kLH-6q-sZK"/>
+                        <outlet property="soundSlider" destination="dZv-2t-7hD" id="bpI-1z-re8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pvN-IX-tno" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

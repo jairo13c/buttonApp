@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ThirdScreen: NSObject {
+class ThirdScreen: UIViewController {
 
 }

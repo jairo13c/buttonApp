@@ -11,27 +11,16 @@ import UIKit
 class ViewController: UIViewController
 {
     @IBOutlet weak var firstButton: UIButton!
-
+    private lazy var color : ColorTools = ColorTools()
     @IBAction func firstMethod(_ sender: UIButton)
     {
         firstButton.backgroundColor =
-            createRandomColor()
-        view.backgroundColor = createRandomColor()
+            color.createRandomColor()
+        view.backgroundColor = color.createRandomColor()
         
-        firstButton.setTitleColor(createRandomColor(), for: .normal)
+        firstButton.setTitleColor(color.createRandomColor(), for: .normal)
         firstButton.setTitle("size\(createRandomeFontSize())", for: .normal)
         firstButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Thin", size: createRandomeFontSize())
-    }
-    private func createRandomColor()-> UIColor
-    {
-        //need red green and blue vaue CGFloat
-        let newColor : UIColor
-        let redValue = CGFloat (Double (arc4random_uniform(256)) / 255.00)
-        let greenValue = CGFloat (Double (arc4random_uniform(256)) / 255.00)
-        let blueValue = CGFloat (Double (arc4random_uniform(256)) / 255.00)
-        
-        newColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: CGFloat(1.0))
-        return newColor
     }
     
     
